@@ -68,3 +68,32 @@ export const HistoryButton: React.FC<HistoryButtonProps> = ({onClick, text}) => 
         />
       )
 }
+
+interface ChatVersionButtonProps extends IButtonProps {
+    onClick: () => void;
+    test: string;
+}
+
+export const ChatVersionButton: React.FC<ChatVersionButtonProps> = ({onClick, text}) => {
+    const ChatVersionButtonStyles: ICommandBarStyles & IbuttonStyles = {
+        root: {
+            width: '180px',
+            border: '1px solid #D1D1D1',
+        },
+        rootHovered: {
+            border: '1px solid #D1D1D1',
+        },
+        rootPressed: {
+            border: '1px solid #D1D1D1',
+        },
+    };
+
+    return (
+        <DefaultButton
+            text={text}
+            iconProps={{ iconName: 'ChatGPT' }}
+            onClick={onClick}
+            styles={ChatVersionButtonStyles}
+        />
+    )
+}
