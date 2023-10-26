@@ -71,11 +71,11 @@ export const HistoryButton: React.FC<HistoryButtonProps> = ({onClick, text}) => 
 
 interface ChatVersionButtonProps extends IButtonProps {
     onClick: () => void;
-    test: string;
+    text: string;
 }
 
 export const ChatVersionButton: React.FC<ChatVersionButtonProps> = ({onClick, text}) => {
-    const ChatVersionButtonStyles: ICommandBarStyles & IbuttonStyles = {
+    const ChatVersionButtonStyles: ICommandBarStyles & IButtonStyles = {
         root: {
             width: '180px',
             border: '1px solid #D1D1D1',
